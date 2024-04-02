@@ -15,7 +15,7 @@ export class ContainerComponent {
   searchText:string = '';
 
   setSearchText(value:string){
-
+    this.searchText=value;
   }
 
 }
