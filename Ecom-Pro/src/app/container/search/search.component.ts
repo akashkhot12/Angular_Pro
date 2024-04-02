@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -9,9 +9,16 @@ export class SearchComponent {
   searchText: string = '';
 
   // 1. creat an event 
-  onSearchTextChanged:EventEmitter<string> = new EventEmitter<string>(); 
+  @Output()
+  searchTextChanged:EventEmitter<string> = new EventEmitter<string>(); 
+
+  onSearchTextChanged(){
+    this.searchTextChanged.emit(this.searchText)
+  }
 
   updateSearchText(event: any){
       this.searchText = event.target.value;
   }
+
+  
 }

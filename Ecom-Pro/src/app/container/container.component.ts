@@ -10,4 +10,12 @@ export class ContainerComponent {
   name:string = "iphone"
   price:number = 399
   category:string = "mobile"
+
+
+  searchText:string = '';
+
+  setSearchText(value:string){
+
+  }
+
 }
