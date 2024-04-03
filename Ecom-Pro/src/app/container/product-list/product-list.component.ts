@@ -6,7 +6,7 @@ import { Product } from '../../Models/product';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  selectedProduct:any = Product;
+  selectedProduct: Product;
   products = [
     {
       id: 1,
